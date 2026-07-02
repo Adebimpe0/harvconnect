@@ -33,3 +33,6 @@ def match(lat:float,lon:float,commodity:str,top_n:int=5):
 @app.get("/commodities")
 def get_commodities():
     return {"commodities":ref_prices["commodity"].unique().tolist()}
+@app.get("/health")
+def health():
+    return {"status": "ok"}
